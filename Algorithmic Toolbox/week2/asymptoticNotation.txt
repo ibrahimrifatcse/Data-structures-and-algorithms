@@ -1,0 +1,20 @@
+             n                  nlogn            n^2             2^n
+ ---------------------------------------------------------------------------
+  n=20    |  1 sec       |        1 sec     |     1 sec     |     1 sec
+  n=50    |  1 sec       |        1 sec     |     1 sec     |     13 day
+  n=10^2  |  1 sec       |        1 sec     |     1 sec     |     4.10^13 year
+  n=10^6  |  1 sec       |        1 sec     |     17 min    |
+  n=10^9  |  1 sec       |        30 sec    |     30 year   |
+  -------------------------------------------------------------------------------
+  max n      10^9                 10^7.5          10^4.5              30
+
+
+ log n < sqrt(n) < n < n log n <n^2 < 2^n
+ 
+                                                   
+                                                   Big O
+                                                 ---------
+                                                 
+f(n)= O(g(n)) (f is Big-O of g) or f <= g if there exist constants N and c so that for all n>=N, f(n) <= c*g(n).
+
+ 

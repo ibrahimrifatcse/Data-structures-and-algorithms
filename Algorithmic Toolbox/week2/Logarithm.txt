@@ -1,0 +1,8 @@
+                                              Logarithm
+                                          ----------------
+     log b (x) = y iff b^y =  x (log b= log base b) # when we talk about log of N or log of x we always assume that 
+                                                        the base is two.
+                                                     # what's binary logarithm?
+                                                     => which is logarithm base two.
+ log2(N) y = iff 2^y = N
+ 

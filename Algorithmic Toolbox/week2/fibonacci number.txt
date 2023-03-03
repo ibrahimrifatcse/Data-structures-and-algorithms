@@ -1,0 +1,99 @@
+                                                            Fibonacci Naive algorithm
+                                                        -----------------------------------
+
+          0,                      n=0
+F(n) = {  1,                      n=1
+          F(n-1)+F(n-2),          n>1.
+          
+          0,1,1,2,3,5,8,13,21,34,.............
+          
+          
+                            theorem 
+        
+        F(n) = 1/√5 ((1+√5/2)^n - (1-√5/2)^n)
+        
+         
+         Algorithm:
+         ----------
+         FibRecurs(n)
+         if n<=1:
+         return n;
+         else:
+         return FibRecurs(n-1)+FibRecurs(n-2)
+         
+         for fibonacci algorithm T(n) = 2
+         
+                                             Running time 
+                                         ----------------------------
+       Let T(n) denote the number of lines of code execute by FibRecurs(n).
+       
+       
+       
+   T(n) >= F(n) 
+   T(100) ~~ 1.77*10^21 (1.77 sextillion)
+   
+   
+                                                             why so slow?
+                                                          ------------------
+                                                          
+                                                             F(n)
+                                                      /               \                       
+                            F(n-1)                                                         F(n-2)
+                       /               \                                                 /          \
+               F(n-2)                  F(n-3)                                      F(n-3)           F(n-4)
+           /           \              /        \                                  /     \           /       \    
+      F(n-3)           F(n-4)        F(n-4)     F(n-5)                       F(n-4)    F(n-5)     F(n-5)    F(n-6)                                
+                                      
+                                      
+                                      
+                                Fig : big tree of recursive calls
+   
+                                                                  
+                                                                  Efficient Algorithm
+                                                               -----------------------------
+        new algo:
+        
+        FibList(n)
+        creat an array F[0..........n]
+        F[0]<-0
+        F[1]<-1
+        for i from 2 to n:
+        F[i]<-F[i-1]+F[i-2]
+        return F[n]
+        
+        #T(n) = 2n+2 , so T(100) = 202
+        #Easy to compute.
+        
+        c++ code
+        ---------------
+        #include"bits/stdc++.h"
+using namespace std;
+int Fiblist(int &n)
+{
+	int F[n+1];
+	F[0]=0;
+	F[1]=1;
+	for(int i=2;i<=n;i++)
+	{
+		F[i] = F[i-1] + F[i-2];
+	}
+	return F[n];
+}
+
+int main()
+{
+	ios_base::sync_with_stdio(false);
+	
+	int n;
+	cin>>n;
+	cout<<Fiblist(n)<<"\n";
+}
+                                      
+        
+									summary
+                                                                    ----------------
+								    
+				1. naive algorithm takes ridiculously long time on small examples.
+				2. improve algorithm icredibly fast
+                                      
+                                      
