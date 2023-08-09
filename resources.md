@@ -1,0 +1,1 @@
+- [algorithms](https://networkx.org/documentation/stable/reference/algorithms/index.html)
