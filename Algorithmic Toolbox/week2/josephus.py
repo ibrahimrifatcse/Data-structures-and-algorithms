@@ -4,7 +4,7 @@ def josephus(n, k):
     if n == 1:
         return 0
     else:
-        return (josephus(n - 1, k) + k) % n # (Josephus(n,k)−k)modn=Josephus(n−1,k) .
+        return (josephus(n - 1, k) + k) % n # (Josephus(n,k)−k)mod n =J osephus(n−1,k) .
 
 # Example usage:
 n = 13  
