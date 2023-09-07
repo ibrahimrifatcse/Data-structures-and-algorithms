@@ -1,3 +1,5 @@
+# Faster 
+
 # def josephus(n, k):
 #     if n == 1:
 #         return 0
@@ -11,7 +13,7 @@
 # print("Position of the survivor:", survivor_position)
 
 
-# another to solve : 
+# another to solve and naive : 
 def josephus(n, k):
     # Allocate a Boolean array to track who is alive or dead
     alive_or_dead = [True] * n
